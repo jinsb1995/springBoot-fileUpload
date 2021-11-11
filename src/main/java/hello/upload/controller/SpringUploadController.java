@@ -29,7 +29,7 @@ public class SpringUploadController {
     @PostMapping("/upload")
     public String saveFile(@RequestParam String itemName,
                            @RequestParam MultipartFile file, HttpServletRequest request) throws IOException {
-
+                           // ArgumentResolver가 MultipartFile이라는것을 처리? 해준다.
         log.info("request = {} ", request);
         log.info("itemName = {} ", itemName);
         log.info("multipartFile = {} ", file);
